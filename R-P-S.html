@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="R-P-S.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <title>Rock Paper Scissors Game</title>
+    <h1>Play Rock Paper Scissors</h1>
+    <h2><strong>Rules:</strong>Select one picture and click the play button to see if you beat the computer. </h2>
+      <ul>
+          <li>Paper beats rock</li>
+          <li>Rock beats scissors</li>
+          <li>Scissors beats papers</li>
+      </ul> 
+    <label>
+        Rock
+        <input name="user-guess" value="rock" type="radio" checked> 
+        <img class="choiceImage" src="></label>
+    <label>
+        Paper
+        <input name="user-guess" value="paper" type="radio"></input>
+        <img class="choiceImage" src="">
+    </label>
+    <label>
+        Scissors
+        <input name="user-guess" value="scissors" type="radio"/> 
+        <img class="choiceImage" src="">
+    </label>
+    <h3>
+        <button id="play-button">Play!</button>
+        <button id="reset-button">Reset Game</button>
+    </h3>
+    <results>
+        <div id="summary" class="hidden">Result: <span id="result"></span></div>
+        <div>Number of Wins: <span id="wins"></span></div>
+        <div>Number of Loses: <span id="loses"></span><dive>
+        <div>Number of Ties: <span id="ties"></span></div>
+    </results>
+
+    <script type="module" src="R-P-S.js"></script>
+</body>
+
+</html>

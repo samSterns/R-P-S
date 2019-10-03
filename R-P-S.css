@@ -1,0 +1,9 @@
+.choiceImage {
+    border: 5px solid transparent;
+    border-radius: 100%;
+    width: 50px;
+}
+
+input:checked + .choiceImage {
+    border: 5px solid steelblue;
+}
