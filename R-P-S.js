@@ -1,45 +1,37 @@
+import getRandomThrow from './get-throw.js';
+import checkResults from './chek-results.js';
 //fetch DOM elements
+const playButton = document.getElementById('play-button');
+const result = document.getElementById('result');
+const numberOfWins = document.getElementById('wins');
+const numberOfLoses = document.getElementById('loses');
+const numberOfTies = document.getElementById('ties');
 
+let ties = 0;
+let wins = 0;
+let loses= 0;
 
-//set intitial stater 
+numberOfTies.textContent = ties;
+numberOfLoses.textContent = loses;
+numberOfWins.textContent = wins; 
 
-//define DOM utility function
-
-
-// const generateRandomInt => {
-    
-// }
-
-const rockValue = 0;
-constpaperValue= 1
-const
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-}
-console.log(getRandomInt(3));
-
-const getRandomThrow = () => {
-    if (getZeroOneTwo === 0) {
-        return rock;
-    } else if (getZeroOneTwo === 1) {
-        return 'paper';
-    } else if (getZeroOneTwo === 2) {
-        return 'paper';}
-}
-
-//   // expected output: 0, 1 or 2
-// console.log(getRandomInt(2));
-// console.log(getRandomInt(1));
-// console.log(Math.random());
-  // expected output: a number between 0 and 1
-
-//const getRandomThrow = () => Math.round(Math.random()) {
-
-
-
-
-// set some initial state
-
-
-// define DOM utility function
+playButton.addEventListener('click', () => {
+    const computerChoice = getRandomThrow();
+    const playerChoice = document.querySelector('input:checked').value;
+    const gameResult = checkResults (playerChoice, computerChoice);
+    console.log(playerChoice, 'this is play');
+    console.log(computerChoice, 'this is comp');
+    if (gameResult === 'Tie') {
+        result.textContent = 'Tie';
+        ties = ties + 1;
+        numberOfTies.textContent = ties;
+    } else if (gameResult === 'Win') {
+        result.textContent = 'You won wow!'; 
+        wins = wins + 1;
+        numberOfWins.textContent = wins;
+    } else if (gameResult === 'Lose') {
+        result.textContent = 'You lost. Try again';
+        loses = loses + 1;
+        numberOfLoses.textContent = loses;
+    }
+});

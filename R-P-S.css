@@ -5,5 +5,26 @@
 }
 
 input:checked + .choiceImage {
-    border: 5px solid steelblue;
+    border: 10px solid blue;
+}
+
+h1 {
+    display: flex;
+    justify-content: center
+}
+
+h2 {
+    display: flex;
+    justify-content: center
+}
+
+body{
+    background-color: beige;
+}
+[type=radio] {
+    display:none;
+}
+
+#summary {
+    font-size: 50px
 }

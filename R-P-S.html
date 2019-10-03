@@ -12,7 +12,7 @@
 <body>
     <title>Rock Paper Scissors Game</title>
     <h1>Play Rock Paper Scissors</h1>
-    <h2><strong>Rules:</strong>Select one picture and click the play button to see if you beat the computer. </h2>
+    <h2><strong>Rules: </strong><br>Select one picture. Then, click the play button to see if you beat the computer. </h2>
       <ul>
           <li>Paper beats rock</li>
           <li>Rock beats scissors</li>
@@ -21,20 +21,18 @@
     <label>
         Rock
         <input name="user-guess" value="rock" type="radio" checked> 
-        <img class="choiceImage" src="></label>
+        <img class="choiceImage" src="https://thumbs.dreamstime.com/z/rock-paper-scissors-rock-hand-isolated-white-31662043.jpg"></label>
     <label>
         Paper
         <input name="user-guess" value="paper" type="radio"></input>
-        <img class="choiceImage" src="">
-    </label>
+        <img class="choiceImage" src="https://previews.123rf.com/images/jipen/jipen1306/jipen130600011/20568308-rock-paper-scissors-paper-hand-isolated-on-white.jpg"></label>
     <label>
         Scissors
         <input name="user-guess" value="scissors" type="radio"/> 
-        <img class="choiceImage" src="">
+        <img class="choiceImage" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png">
     </label>
     <h3>
         <button id="play-button">Play!</button>
-        <button id="reset-button">Reset Game</button>
     </h3>
     <results>
         <div id="summary" class="hidden">Result: <span id="result"></span></div>
